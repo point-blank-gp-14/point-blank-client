@@ -21,6 +21,9 @@ export default {
     players () {
       return this.$store.state.players
     }
+  },
+  created () {
+    this.$store.commit('getPlayers')
   }
 }
 </script>
