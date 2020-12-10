@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import Swal from 'sweetalert2'
 export default {
   name: 'Login',
   data () {
@@ -28,7 +29,18 @@ export default {
   },
   methods: {
     login () {
-      this.$store.commit('REGISTER', this.name)
+      const user = this.name
+      console.log(user, 'ini nama dari metod')
+      if (user) {
+        this.$store.commit('REGISTER', this.name)
+        console.log('dia lewat')
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Please dont leave username empty'
+        })
+      }
     }
   }
 }
