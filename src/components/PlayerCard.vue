@@ -4,14 +4,14 @@
       <div class="row no-gutters">
         <div class="col-md-4">
           <img
-            src="https://robohash.org/YOUR-TEXT.png?set=set4"
+            :src="image"
             class="card-img rounded-circle"
             alt="..."
           />
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ player.name }}</h5>
-          <p class="card-text">oke</p>
+          <p class="card-text">your score: {{ player.score }}</p>
         </div>
       </div>
     </div>
@@ -20,7 +20,12 @@
 
 <script>
 export default {
-  props: ['player']
+  props: ['player'],
+  data () {
+    return {
+      image: `https://robohash.org/${this.player.name}.png?set=set4`
+    }
+  }
 }
 </script>
 
