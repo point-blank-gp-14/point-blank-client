@@ -9,6 +9,15 @@ export default new Vuex.Store({
     position: 0,
     players: []
   },
+  getters: {
+    getLeadboards (state) {
+      return state.players.sort((a, b) => {
+        if (a.score > b.score) return -1
+        if (a.score < b.score) return 1
+        return 0
+      })
+    }
+  },
   mutations: {
     REGISTER (state, payload) {
       this._vm.$socket.emit('register', payload)
