@@ -34,6 +34,12 @@ export default new Vuex.Store({
     },
     SOCKET_FETCH_USER (state, payload) {
       state.players = payload
+    },
+    doPlay (stay, payload) {
+      this._vm.$socket.emit('play')
+    },
+    SOCKET_DO_PLAY (state, payload) {
+      router.push('/home')
     }
   },
   actions: {
