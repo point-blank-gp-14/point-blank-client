@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="card mb-3 rounded-pill p-1 btn-outline-primary mt-5" style="width:25%" >
+    <div class="card mb-3 rounded-pill p-1 btn-outline-primary" style="width:25%" >
       <div class="row no-gutters">
         <div class="col-md-4">
           <img

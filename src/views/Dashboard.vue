@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>ini dashboard</h1>
+    <h1 class="mb-5">ini dashboard</h1>
     <PlayerCard
       v-for="(player,i) in players"
       :key="i"
