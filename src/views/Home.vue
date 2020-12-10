@@ -5,10 +5,12 @@
         <div v-for="(player,i) in players" :key="i"  class="p-2">{{ player.name }} => {{ player.score }}</div>
       </div>
     </nav>
+    <MainBoard></MainBoard>
   </div>
 </template>
 
 <script>
+import MainBoard from '../components/MainBoard'
 // @ is an alias to /src
 export default {
   name: 'Home',
@@ -16,6 +18,9 @@ export default {
     players () {
       return this.$store.state.players
     }
+  },
+  components: {
+    MainBoard
   }
 }
 </script>
