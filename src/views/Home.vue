@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container d-flex justify-content-between">
+        <div v-for="(player,i) in players" :key="i"  class="p-2">{{ player.name }} => {{ player.score }}</div>
+      </div>
+    </nav>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  computed: {
+    players () {
+      return this.$store.state.players
+    }
   }
 }
 </script>
+
+<style scoped>
+.home{
+  background-image: url('https://webstockreview.net/images/jungle-clipart-animation.gif');
+  background-size: cover;
+  height: 100vh;
+  padding:0;
+  margin:0;
+}
+</style>
