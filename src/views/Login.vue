@@ -32,8 +32,16 @@ export default {
       const user = this.name
       console.log(user, 'ini nama dari metod')
       if (user) {
-        this.$store.commit('REGISTER', this.name)
-        console.log('dia lewat')
+        if (this.$store.state.players.length < 4) {
+          this.$store.commit('REGISTER', this.name)
+          console.log('dia lewat')
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Sorry, room is already full'
+          })
+        }
       } else {
         Swal.fire({
           icon: 'error',
@@ -42,6 +50,9 @@ export default {
         })
       }
     }
+  },
+  created () {
+    this.$store.commit('getPlayers')
   }
 }
 </script>
