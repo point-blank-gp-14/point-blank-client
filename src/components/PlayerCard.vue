@@ -10,8 +10,9 @@
           />
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{ player.name }}</h5>
+          <h5 class="card-title">{{ player.name }} P{{ i + 1 }}</h5>
           <p class="card-text">your score: {{ player.score }}</p>
+          <p class="card-text">Ready!</p>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@
 
 <script>
 export default {
-  props: ['player'],
+  props: ['player', 'i'],
   data () {
     return {
       image: `https://robohash.org/${this.player.name}.png?set=set4`
