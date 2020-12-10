@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '../router'
 
 Vue.use(Vuex)
 
@@ -10,6 +11,7 @@ export default new Vuex.Store({
   mutations: {
     REGISTER (state, payload) {
       this._vm.$socket.emit('register', payload)
+      router.push('/dashboard')
     },
     randomPosition (state, payload) {
       this._vm.$socket.emit('GET_POSITION', state.position)
