@@ -46,6 +46,10 @@ export default new Vuex.Store({
     addScore (state, payload) {
       console.log(state.playerName)
       this._vm.$socket.emit('addScore', state.playerName)
+    },
+    SOCKET_END_TRIGGER (state, payload) {
+      console.log(payload)
+      router.push('/login')
     }
   },
   actions: {
