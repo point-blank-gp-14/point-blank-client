@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-if="index == currentPosition || currentPosition == 0" @click.prevent="trigger">klik</button>
+    <button v-if="index == currentPosition" @click.prevent="trigger">klik</button>
   </div>
 </template>
 
