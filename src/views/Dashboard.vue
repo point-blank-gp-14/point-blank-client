@@ -20,7 +20,6 @@
     <div class="content">
       <h1>Objective</h1>
       <p>Shoot the target before your opponents shoot it. Mb1 = shoot. The player with the biggest score wins</p>
-      <!-- Use a button to pause/play the video with JavaScript -->
     </div>
   </div>
 </template>
