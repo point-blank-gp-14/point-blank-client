@@ -7,13 +7,15 @@
         </a>
       </div>
     </nav>
-    <h1><button @click.prevent="goToHome" class="btn btn-primary mr-5">play</button></h1>
-    <PlayerCard
-      v-for="(player,i) in players"
-      :key="i"
-      :player="player"
-      :i="i"
-    />
+    <h1><button @click.prevent="goToHome" class="btn btn-primary mr-5">PLAY</button></h1>
+    <div>
+      <PlayerCard
+        v-for="(player,i) in players"
+        :key="i"
+        :player="player"
+        :i="i"
+      />
+    </div>
     <video autoplay loop id="myVideo">
       <source src="../assets/Let-the-games-begin.mp4" type="video/mp4">
     </video>
@@ -85,5 +87,11 @@ export default {
 }
 .navbar-brand{
   text-align: center;
+}
+.player-cards {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  width: 50vw;
 }
 </style>
