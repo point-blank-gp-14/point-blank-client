@@ -50,6 +50,9 @@ export default new Vuex.Store({
     SOCKET_END_TRIGGER (state, payload) {
       console.log(payload)
       router.push('/login')
+    },
+    SOCKET_TRIGGER_SOUND (state, payload) {
+      console.log('duar')
     }
   },
   actions: {
