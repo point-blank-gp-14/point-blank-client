@@ -65,6 +65,8 @@ export default new Vuex.Store({
     },
     SOCKET_TRIGGER_SOUND (state, payload) {
       console.log('duar')
+      const audio = new Audio(require('../audio/shot.mp3'))
+      audio.play()
     }
   },
   actions: {
