@@ -62,6 +62,9 @@ export default new Vuex.Store({
         imageAlt: 'Custom image'
       })
       this._vm.$socket.emit('restart')
+    },
+    SOCKET_TRIGGER_SOUND (state, payload) {
+      console.log('duar')
     }
   },
   actions: {
