@@ -7,7 +7,7 @@
         </a>
       </div>
     </nav>
-    <h1><button @click.prevent="goToHome" class="btn btn-primary mr-5">PLAY</button></h1>
+    <button @click.prevent="goToHome" class="btn btn-primary mr-5"><h1>PLAY</h1></button>
     <div>
       <PlayerCard
         v-for="(player,i) in players"
