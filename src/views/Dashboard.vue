@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     goToHome () {
-      if (this.players.length === 4) {
+      if (this.players.length < 4) {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
