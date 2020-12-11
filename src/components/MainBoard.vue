@@ -2,16 +2,16 @@
       <div class="main-board">
        <div class="gameBoard">
         <div class="container">
-          <div class="box item0">0<Target :index="0"></Target></div>
-          <div class="box item1">1<Target :index="1"></Target></div>
-          <div class="box item2">2<Target :index="2"></Target></div>
-          <div class="box item3">3<Target :index="3"></Target></div>
-          <div class="box item4">4<Target :index="4"></Target></div>
-          <div class="box item5">5<Target :index="5"></Target></div>
-          <div class="box item6">6<Target :index="6"></Target></div>
-          <div class="box item7">7<Target :index="7"></Target></div>
-          <div class="box item8">8<Target :index="8"></Target></div>
-          <div class="box item9">9<Target :index="9"></Target></div>
+          <div class="box item0"><Target :index="0"></Target></div>
+          <div class="box item1"><Target :index="1"></Target></div>
+          <div class="box item2"><Target :index="2"></Target></div>
+          <div class="box item3"><Target :index="3"></Target></div>
+          <div class="box item4"><Target :index="4"></Target></div>
+          <div class="box item5"><Target :index="5"></Target></div>
+          <div class="box item6"><Target :index="6"></Target></div>
+          <div class="box item7"><Target :index="7"></Target></div>
+          <div class="box item8"><Target :index="8"></Target></div>
+          <div class="box item9"><Target :index="9"></Target></div>
         </div>
       </div>
       <div class="scoreBoard">
@@ -75,7 +75,7 @@ export default {
     display: block;
     width: 250px;
     height: 200px;
-    background: url(image/kucing2.png)center no-repeat;
+    /* background: url(image/kucing2.png)center no-repeat; */
     background-size: 100%;
     text-align: center;
     /* padding: 20px; */

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button v-if="index == currentPosition" @click.prevent="trigger">klik</button>
+    <!-- <button >klik</button> -->
+    <img src="./image/kucing2.png" alt="gambar kucing" v-if="index == currentPosition" @click.prevent="trigger">
   </div>
 </template>
 
