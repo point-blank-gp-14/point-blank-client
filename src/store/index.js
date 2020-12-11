@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
+import Swal from 'sweetalert2'
 
 Vue.use(Vuex)
 
@@ -8,7 +9,8 @@ export default new Vuex.Store({
   state: {
     position: 1,
     players: [],
-    playerName: ''
+    playerName: '',
+    winner: ''
   },
   getters: {
     getLeadboards (state) {
@@ -49,7 +51,17 @@ export default new Vuex.Store({
     },
     SOCKET_END_TRIGGER (state, payload) {
       console.log(payload)
-      router.push('/login')
+      router.push('/dashboard')
+      state.winner = payload
+      Swal.fire({
+        title: 'Sweet!',
+        text: payload + ' is the winner.',
+        imageUrl: 'https://pngimg.com/uploads/crown/crown_PNG16.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image'
+      })
+      this._vm.$socket.emit('restart')
     }
   },
   actions: {
