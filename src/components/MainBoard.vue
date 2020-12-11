@@ -2,15 +2,16 @@
       <div class="main-board">
        <div class="gameBoard">
         <div class="container">
-          <div class="box item1">1</div>
-          <div class="box item2">2</div>
-          <div class="box item3">3</div>
-          <div class="box item4">4</div>
-          <div class="box item5">5</div>
-          <div class="box item6">6</div>
-          <div class="box item7">7</div>
-          <div class="box item8">8</div>
-          <div class="box item9">9</div>
+          <div class="box item0">0<Target :index="0"></Target></div>
+          <div class="box item1">1<Target :index="1"></Target></div>
+          <div class="box item2">2<Target :index="2"></Target></div>
+          <div class="box item3">3<Target :index="3"></Target></div>
+          <div class="box item4">4<Target :index="4"></Target></div>
+          <div class="box item5">5<Target :index="5"></Target></div>
+          <div class="box item6">6<Target :index="6"></Target></div>
+          <div class="box item7">7<Target :index="7"></Target></div>
+          <div class="box item8">8<Target :index="8"></Target></div>
+          <div class="box item9">9<Target :index="9"></Target></div>
         </div>
       </div>
       <div class="scoreBoard">
@@ -36,7 +37,10 @@
 </template>
 
 <script>
+import Target from './Target.vue'
+
 export default {
+  components: { Target },
   name: 'mainBoard'
 }
 </script>
@@ -71,6 +75,10 @@ export default {
     text-align: center;
     /* padding: 20px; */
     font-size: 30px;
+  }
+  .item0 {
+    grid-column: 4;
+    grid-row: 2;
   }
   .item1 {
     grid-column: 1 / span 3;

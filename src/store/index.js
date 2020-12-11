@@ -6,8 +6,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    position: 0,
-    players: []
+    position: 1,
+    players: [],
+    playerName: ''
   },
   getters: {
     getLeadboards (state) {
@@ -22,6 +23,7 @@ export default new Vuex.Store({
     REGISTER (state, payload) {
       this._vm.$socket.emit('register', payload)
       router.push('/dashboard')
+      state.playerName = payload
     },
     randomPosition (state, payload) {
       this._vm.$socket.emit('GET_POSITION', state.position)
@@ -40,6 +42,10 @@ export default new Vuex.Store({
     },
     SOCKET_DO_PLAY (state, payload) {
       router.push('/home')
+    },
+    addScore (state, payload) {
+      console.log(state.playerName)
+      this._vm.$socket.emit('addScore', state.playerName)
     }
   },
   actions: {
