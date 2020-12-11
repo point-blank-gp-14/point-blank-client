@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <button >klik</button> -->
-    <img src="./image/kucing2.png" alt="gambar kucing" v-if="index == currentPosition" @click.prevent="trigger">
+    <img src="./image/kucing2.png" class="kucing" alt="gambar kucing" v-if="index == currentPosition" @click.prevent="trigger">
   </div>
 </template>
 
@@ -25,5 +25,10 @@ export default {
 </script>
 
 <style>
-
+.kucing {
+    margin-top: 15%;
+    position: relative;
+    bottom: 25px;
+    cursor: url(image/shot.png), auto;
+}
 </style>
