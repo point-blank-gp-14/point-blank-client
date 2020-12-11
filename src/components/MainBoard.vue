@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .main-board {
    display: flex;
    /* background: url(https://images.wallpaperscraft.com/image/snow_winter_trees_136654_3840x2160.jpg)center no-repeat */
