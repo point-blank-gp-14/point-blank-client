@@ -25,10 +25,10 @@
               </tr>
             </thead>
             <tbody class="tbody-light">
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+              <tr v-for="(player, i) in getLeadboards" :key="i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{player.name}}</td>
+                <td>{{player.score}}</td>
               </tr>
             </tbody>
           </table>
@@ -41,7 +41,12 @@ import Target from './Target.vue'
 
 export default {
   components: { Target },
-  name: 'mainBoard'
+  name: 'mainBoard',
+  computed: {
+    getLeadboards (state) {
+      return this.$store.getters.getLeadboards
+    }
+  }
 }
 </script>
 
